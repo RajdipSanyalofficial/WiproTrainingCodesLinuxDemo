@@ -1,0 +1,523 @@
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  info  mergedinfo  names  newdata  newnames  subdir
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  newdata  sample  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+
+
+
+ghfghfghfghf
+ghfghhfhgfgh
+hfghfghghfgh
+Helo...This is my first demo to vi
+ghfhghggfhgh
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+Helo...This is my first demo to vi
+
+
+echo "Enter value of c"
+read c
+echo "Enter value of d"
+read d
+echo `expr $c + $d`
+
+rps@rps-virtual-machine:~/Desktop/demo$ sh file1
+Enter value of a
+10
+Enter value of b
+20
+30
+
+echo "Enter value of c"
+read c
+echo "Enter value of d"
+read d
+echo `expr $c \* $d`
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ sh file1
+Enter value of a
+10
+Enter value of b
+20
+200
+
+echo "enter value a"
+read a
+
+echo "enter value b"
+read b
+echo `expr  $a  \/  $b`
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi file1
+rps@rps-virtual-machine:~/Desktop/demo$ sh file1
+enter value a
+27
+enter value b
+3
+9
+
+echo "Enter value for a"
+read a
+echo "Enter value for b"
+read b
+if [$a - gt 0 -a $b -gt 0]
+then
+echo `expr $a\*$b`
+else
+echo "Only non-zero values are allowed"
+fi
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi file2
+rps@rps-virtual-machine:~/Desktop/demo$ sh file2
+Enter value for a
+6
+Enter value for b
+0
+Only non-zero values are allowed
+rps@rps-virtual-machine:~/Desktop/demo$ sh file2
+Enter value for a
+6
+Enter value for b
+8
+48
+
+
+
+echo "enter value a"
+read a
+echo "enter value b"
+read b
+echo "enter value c"
+read c
+if [ $a - gt $b - a $a - gt $c ]
+then
+echo "a is large"
+elif [ $b -gt $c ]
+then
+echo "b is large"
+else
+echo "c is large"
+fi
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi task1
+rps@rps-virtual-machine:~/Desktop/demo$ sh task1
+enter value a
+2
+enter value b
+4
+enter value c
+9
+c is larger
+
+
+echo "Menu"
+echo "1. Present working directory"
+echo "2. current date"
+echo "3. List of files"
+echo "Enter your choice"
+read ch
+case $ch in
+        1) pwd;;
+        2) date;;
+        3) ls -l;;
+        4) echo "Invalid choice"
+esac
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi switch.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh switch.sh
+Menu
+1. Present working directory
+2. current date
+3. List of files
+Enter your choice
+1
+/home/rps/Desktop/demo
+rps@rps-virtual-machine:~/Desktop/demo$ sh switch.sh
+Menu
+1. Present working directory
+2. current date
+3. List of files
+Enter your choice
+2
+Monday 12 August 2024 02:01:07 PM IST
+
+
+for i in 1 2 3 4 5
+do
+         echo $i
+ done
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi for.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh for.sh
+1
+2
+3
+4
+5
+rps@rps-virtual-machine:~/Desktop/demo$ vi for.sh
+rps@rps-virtual-machine:~/Desktop/demo$ ls -l
+total 24
+-rw-rw-r-- 1 rps rps  168  Aug 12 11:36 file1
+-rw-rw-r-- 1 rps rps    0  Aug  9 11:47 file2
+-rw-rw-r-- 1 rps rps   37  Aug 12 11:55 for.sh
+-rw-rw-r-- 2 rps rps   97  Aug  9 12:25 newdata
+-rw-rw-r-- 2 rps rps   97  Aug  9 12:25 sample
+drwxrwxr-x 2 rps rps 4096  Aug  9 12:21 subdir
+-rw-rw-r-- 1 rps rps  203  Aug 12 11:47 switch.sh
+
+
+a=1
+until [$a -gt 10]
+do
+echo $a
+a=`expr $a + 1`
+done
+
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi until.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh until.sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+a=1
+while [$a -lt 10]
+do
+echo $a
+a=`expr $a + 1`
+done
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi while.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh while.sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+echo "Enter the multiplication number:"
+read number
+
+echo "Enter the range:"
+read range
+
+for i in $(seq 1 $range);
+do
+  echo "$number * $i = $((number * i))"
+done
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi task2multiplication.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh task2multiplication.sh
+Enter the multiplication number:
+2
+Enter the range:
+10
+2*1=2
+2*2=4
+2*3=6
+2*4=8
+2*5=10
+2*6=12
+2*7=14
+2*8=16
+2*9=18
+2*10=20
+
+
+
+
+echo "Enter a number:"
+read num
+
+sum=0
+temp=$num
+
+while [ $temp -gt 0];
+ do
+  digit=$((temp % 10))
+  sum=$((sum + digit * digit * digit))
+  temp=$((temp/10))
+done
+
+if [ $sum -eq $num ];
+then
+  echo "$num is an Armstrong number."
+else
+  echo "$num is not an Armstrong number."
+fi
+
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi task3armstrong.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh task3armstrong.sh
+Enter a number:
+5
+5 is not an Armstrong number.
+rps@rps-virtual-machine:~/Desktop/demo$ sh task3armstrong.sh
+Enter a number:
+153
+153 is an Armstrong number.
+
+
+echo "no. of parameters $#"
+echo "file name is : $0"
+for i in $*
+do
+       echo $i
+done
+
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi pos.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh pos.sh
+no. of parameters 0
+file name is : pos.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh pos.sh 10 20 30 40 50
+no. of parameters 5
+file name is : pos.sh
+10
+20
+30
+40
+50
+
+
+a[5]
+index=0
+for i in 0 to 5
+do
+        a[index]=i
+        index=`expr $index +1`
+
+done  
+
+
+
+rps@rps-virtual-machine:~/Desktop/demo$ vi array.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh array.sh
+array.sh: 1: a[5]: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 6: a++: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 6: a++: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 6: a++: not found
+rps@rps-virtual-machine:~/Desktop/demo$ vi array.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh array.sh
+array.sh: 1: a[5]: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 6: a++: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 6: a++: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 6: a++: not found
+rps@rps-virtual-machine:~/Desktop/demo$ vi array.sh
+rps@rps-virtual-machine:~/Desktop/demo$ sh array.sh
+array.sh: 1: a[5]: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 5: a[index]=i: not found
+array.sh: 5: a[index]=i: not found
+rps@rps-virtual-machine:~/Desktop/demo$ vi array.sh
+rps@rps-virtual-machine:~/Desktop/demo$
+rps@rps-virtual-machine:~/Desktop/demo$
+rps@rps-virtual-machine:~/Desktop/demo$
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+array.sh file1 file2 for.sh newdata pos.sh sample subdir switch.sh until.sh
+rps@rps-virtual-machine:~/Desktop/demo$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop;35000
+12345678900
+44557384623
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ cd subdir
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ cat data
+rps@rps-virtual-machine:~/Desktop/subdir$ cat subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ cd subdir
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ ls
+data subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ ls -l
+total 4
+-rw-rw-r-- 1 rps rps 63 Aug 10 18:27 data
+-rw-rw-r-- 1 rps rps 0 Aug 10 18:34 subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop/demo$ cat>empinfo.txt
+^C
+rps@rps-virtual-machine:~/Desktop/demo$ vi empinfo.txt
+rps@rps-virtual-machine:~/Desktop/demo$ cat empinfo.txt
+andy sales 95000
+Darshan Marksheet 78000
+Yash Design 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print $1,$3} empinfo.txt
+>
+> ^C
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print $1,$3} empinfo.txt
+^C
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print $1,$3} empinfo.txt
+>
+>
+> ^C
+rps@rps-virtual-machine:~/Desktop/demo$
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print $1,$3} empinfo.txt
+^C
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print $1,$3}' empinfo.txt
+andy 95000
+
+Darshan 78000
+Yash 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{sum+=$3} {print $1,$3}' empinfo.txt
+andy 95000
+Darshan 78000
+Yash 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{sum+=$3} {print "Sum :",sum}' empinfo.txt
+Sum : 95000
+Sum : 173000
+Sum : 261000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{sum+=$3}END {print "Sum :",sum}' empinfo.txt
+Sum : 261000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '$3 > 80000' empinfo.txt
+andy sales 95000
+Yash Design 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print NR,$3 > 80000}' empinfo.txt
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print NR,$1,$3}' empinfo.txt
+1 andy 95000
+2 Darshan 78000
+3 Yash 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print NR,$NF}' empinfo.txt
+1 95000
+2 78000
+3 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{print NR,$0}' empinfo.txt
+1 andy sales 95000
+2 Darshan Marksheet 78000
+3 Yash Design 88000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '/Sandy/' emptext.info
+awk: cannot open emptext.info (No such file or directory)
+rps@rps-virtual-machine:~/Desktop/demo$ awk '/andy/' emptext.info
+awk: cannot open emptext.info (No such file or directory)
+rps@rps-virtual-machine:~/Desktop/demo$ awk '/andy/' emptext.txt
+awk: cannot open emptext.txt (No such file or directory)
+rps@rps-virtual-machine:~/Desktop/demo$ awk '/andy/' empinfo.txt
+andy sales 95000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{ sum +=$3; count++} END { if( count>0) print
+"Average is :", sum/count}' empinfo.txt
+Average is : 87000
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{gsub("Marketing","digital
+Marksheet",$2);print}'empinfo.txt
+awk: 1: unexpected character '.'
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{gsub("Marketing","digital Marksheet",$2);
+print}'empinfo.txtawk: 1: unexpected character '.'
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{gsub("Marketing","digital Marksheet",$2);
+print}'empinfo.txt
+awk: 1: unexpected character '.'
+rps@rps-virtual-machine:~/Desktop/demo$ cat empinfo.txt
+andy sales 95000
+Darshan Marksheet 78000
+Yash Design 88000
+rps@rps-virtual-machine:~/Desktop/demo$ vi empinfo.txt
+rps@rps-virtual-machine:~/Desktop/demo$ cat empinfo.txt
+Sandy sales 95000
+Darshan Marketing 78000
+Yash Design 88000
+Tilaka Sales 87000
+
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2++} END { (for(desig in count) print desig
+> ^C
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2++} END { (for(desig in count) print desig }'
+empinfo.txt
+awk: line 1: syntax error at or near }
+awk: line 1: syntax error at or near for
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2++} END { (for(desig in count) print desig
+count[desig] }' empinfo.txt
+awk: line 1: syntax error at or near }
+awk: line 1: syntax error at or near for
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2++} END { (for(desig in count) print desig
+count[desig] }' empinfo.txt
+awk: line 1: syntax error at or near }
+awk: line 1: syntax error at or near for
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2]++} END { (for(desig in count) print desig
+count[desig] }' empinfo.txt
+awk: line 1: syntax error at or near for
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2]++} END { for(desig in count) print desig
+count[desig] }' empinfo.txt
+Marketing1
+Sales1
+Design1
+sales1
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2++} END { (for(desig in count) print desig}'
+empinfo.txt
+awk: line 1: syntax error at or near }
+awk: line 1: syntax error at or near for
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2]++} END { (for(desig in count) print desig}'
+empinfo.txt
+awk: line 1: syntax error at or near for
+rps@rps-virtual-machine:~/Desktop/demo$ awk '{count[$2]++} END { for(desig in count) print desig}'
+empinfo.txt
+Marketing
+Sales
+Design
+sales
+rps@rps-virtual-machine:~/Desktop/demo$ du
+8 ./subdir
+84 .
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ du
+8 ./demo/subdir
+84 ./demo
+8 ./subdir
+116 .
+rps@rps-virtual-machine:~/Desktop$ free
+total used free shared buff/cache available
+Mem: 8123572 1907008 1433220 79808 4783344 5831368
+Swap: 2097148 768 2096380
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

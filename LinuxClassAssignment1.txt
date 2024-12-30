@@ -1,0 +1,69 @@
+Linux Class Assignment 1
+------------------------
+
+Display the name of your HOME directory on the screen .(Assume you have just logged in)
+List out the names of all the files in your HOME directory.
+Change the working directory to the root directory.
+Verify that the root directory is the current working directory.
+Make HOME directory the current working directory.
+Create a directory newdir under the HOME directory.
+Create a directory subnewdir under newdir directory.
+Under subnewdir create a file called first.Type the following text:
+ 
+This is a sample.
+ 
+Copy the file first to your HOME directory.
+Verify that the file has actually been copied.
+Rename the directory newdir as mydir.
+Verify that the directory has been renamed.
+Remove the directory subnewdir.
+Remove the file first under mydir.
+List out all the files whose name starts with s in the HOME directory.
+
+
+
+rps@rps-virtual-machine:/$ ls
+bin  cdrom  etc  lib   lib64  lost+found  mnt  proc  run  snap  swapfile  tmp  var
+boot dev    home lib32 libx32 media       opt  root  sbin srv   sys       usr
+rps@rps-virtual-machine:/$ cd home
+rps@rps-virtual-machine:/home$ ls
+rps
+rps@rps-virtual-machine:/home$ cd rps/Desktop
+rps@rps-virtual-machine:~/Desktop$ cd /home
+rps@rps-virtual-machine:/home$ mkdir newdir
+mkdir: cannot create directory 'newdir': Permission denied
+rps@rps-virtual-machine:/home$ pwd
+/home
+rps@rps-virtual-machine:/home$ cd rps
+rps@rps-virtual-machine:~$ cd /Desktop
+bash: cd: /Desktop: No such file or directory
+rps@rps-virtual-machine:~$ ls
+Desktop  Documents  Downloads  eclipse-workspace  Music  Pictures  Public  Snap  Templates  Videoes  
+rps@rps-virtual-machine:~$ cd Desktop
+rps@rps-virtual-machine:~/Desktop$ mkdir newdir
+rps@rps-virtual-machine:~/Desktop$ cd newdir
+rps@rps-virtual-machine:~/Desktop/newdir$ mkdir subnewdir
+rps@rps-virtual-machine:~/Desktop/newdir$ cd subnewdir
+rps@rps-virtual-machine:~/Desktop/newdir/subnewdir$ cat>first
+This is a sample
+^C
+rps@rps-virtual-machine:~/Desktop/newdir/subnewdir$ cp first /home/rps/Desktop
+rps@rps-virtual-machine:~/Desktop/newdir/subnewdir$ cd /
+rps@rps-virtual-machine:/$ ls
+bin  cdrom  etc  lib   lib64  lost+found  mnt  proc  run  snap  swapfile  tmp  var
+boot dev    home lib32 libx32 media       opt  root  sbin srv   sys       usr
+rps@rps-virtual-machine:/$ cd home/rps/Desktop
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo  first  info  ' Mobile Application Development '  names  newdir  sample 
+rps@rps-virtual-machine:~/Desktop$ mv newdir mydir
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo  first  info  ' Mobile Application Development '  names  newdir  sample 
+rps@rps-virtual-machine:~/Desktop$ cd mydir
+rps@rps-virtual-machine:~/Desktop/mydir$ ls
+subnewdir
+rps@rps-virtual-machine:~/Desktop/mydir$ rm -r subnewdir
+rps@rps-virtual-machine:~/Desktop/mydir$ ls
+rps@rps-virtual-machine:~/Desktop/mydir$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls s*
+sample
+rps@rps-virtual-machine:~/Desktop$

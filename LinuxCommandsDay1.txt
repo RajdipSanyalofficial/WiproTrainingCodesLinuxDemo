@@ -1,0 +1,1145 @@
+rps@rps-virtual-machine:~/Desktop$ date
+Friday 09 August 2024 09:20:11 AM IST
+rps@rps-virtual-machine:~/Desktop$ date +%Y
+2024
+rps@rps-virtual-machine:~/Desktop$ date +%y
+24
+rps@rps-virtual-machine:~/Desktop$ date +%T
+09:22:10
+rps@rps-virtual-machine:~/Desktop$ date +%D
+08/09/24
+rps@rps-virtual-machine:~/Desktop$ date +%M
+22
+rps@rps-virtual-machine:~/Desktop$ date +%m
+08
+rps@rps-virtual-machine:~/Desktop$ man date
+rps@rps-virtual-machine:~/Desktop$ who
+rps      tty2         2024-08-09 09:17 (tty2)
+rps@rps-virtual-machine:~/Desktop$ whoami
+rps
+rps@rps-virtual-machine:~/Desktop$ finger
+Command 'finger' not found, but can be installed with:
+sudo apt install finger
+rps@rps-virtual-machine:~/Desktop$ mkdir demo
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  names
+rps@rps-virtual-machine:~/Desktop$ rm names
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ cd..
+cd..: command not found
+rps@rps-virtual-machine:~/Desktop$ cd\
+> 
+rps@rps-virtual-machine:~$ 
+rps@rps-virtual-machine:~$ 
+rps@rps-virtual-machine:~$ 
+rps@rps-virtual-machine:~$ pwd
+/home/rps
+rps@rps-virtual-machine:~$ cd Desk~
+bash: cd: Desk~: No such file or directory
+rps@rps-virtual-machine:~$ cd Desktop
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ mkdir new
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+new
+rps@rps-virtual-machine:~/Desktop/demo$ cd new
+rps@rps-virtual-machine:~/Desktop/demo/new$ cd ..
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+new
+rps@rps-virtual-machine:~/Desktop/demo$ rmdir new
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+rps@rps-virtual-machine:~/Desktop/demo$ mkdir new
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+new
+rps@rps-virtual-machine:~/Desktop/demo$ cd new
+rps@rps-virtual-machine:~/Desktop/demo/new$ touch file1
+rps@rps-virtual-machine:~/Desktop/demo/new$ ls
+file1
+rps@rps-virtual-machine:~/Desktop/demo/new$ cd ..
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+new
+rps@rps-virtual-machine:~/Desktop/demo$ rmdir new
+rmdir: failed to remove 'new': Directory not empty
+rps@rps-virtual-machine:~/Desktop/demo$ rm new
+rm: cannot remove 'new': Is a directory
+rps@rps-virtual-machine:~/Desktop/demo$ rm -r new
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+demo
+rps@rps-virtual-machine:~/Desktop$ cat>info
+Today is the 1st session                  
+Learning Linux
+^C
+rps@rps-virtual-machine:~/Desktop$ cat>info
+^C
+rps@rps-virtual-machine:~/Desktop$ cat<info
+rps@rps-virtual-machine:~/Desktop$ cat>info
+Today is the 1st session
+Learning Linux
+^C
+rps@rps-virtual-machine:~/Desktop$ cat<info
+Today is the 1st session
+Learning Linux
+rps@rps-virtual-machine:~/Desktop$ cat info
+Today is the 1st session
+Learning Linux
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  info
+rps@rps-virtual-machine:~/Desktop$ cat>info
+Tilaka
+Sandy
+^C
+rps@rps-virtual-machine:~/Desktop$ cat info
+Tilaka
+Sandy
+rps@rps-virtual-machine:~/Desktop$ cat>>info
+yashu
+kayu
+^C
+rps@rps-virtual-machine:~/Desktop$ cat info
+Tilaka
+Sandy
+yashu
+kayu
+rps@rps-virtual-machine:~/Desktop$ rm info
+rps@rps-virtual-machine:~/Desktop$ ls
+demo
+rps@rps-virtual-machine:~/Desktop$ cat>names
+Tilaka
+Sandy
+Yashu
+Kayu
+^C
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+rps@rps-virtual-machine:~/Desktop$ cat>>names
+Pranav
+Darshan
+Akash
+^C
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+rps@rps-virtual-machine:~/Desktop$ head -4 names
+Tilaka
+Sandy
+Yashu
+Kayu
+rps@rps-virtual-machine:~/Desktop$ tail -4 names
+Kayu
+Pranav
+Darshan
+Akash
+rps@rps-virtual-machine:~/Desktop$ tail +4 names
+Kayu
+Pranav
+Darshan
+Akash
+rps@rps-virtual-machine:~/Desktop$ tail +3 names
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+rps@rps-virtual-machine:~/Desktop$ sort names
+Akash
+Darshan
+Kayu
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ sort -f names
+Akash
+Darshan
+Kayu
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ sort -b names
+Akash
+Darshan
+Kayu
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ cat>>names
+    pooja
+^C
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+    pooja
+rps@rps-virtual-machine:~/Desktop$ sort names
+Akash
+Darshan
+Kayu
+    pooja
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ sort -b  names
+Akash
+Darshan
+Kayu
+    pooja
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ sort -f names
+Akash
+Darshan
+Kayu
+    pooja
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ cat>>names
+arun
+arun
+^C
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+    pooja
+arun
+arun
+rps@rps-virtual-machine:~/Desktop$ sort -u names
+Akash
+arun
+Darshan
+Kayu
+    pooja
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+    pooja
+arun
+arun
+rps@rps-virtual-machine:~/Desktop$ cat names|sort
+Akash
+arun
+arun
+Darshan
+Kayu
+    pooja
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ sort names -o file1
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  file1  names
+rps@rps-virtual-machine:~/Desktop$ cat names
+Tilaka
+Sandy
+Yashu
+Kayu
+Pranav
+Darshan
+Akash
+    pooja
+arun
+arun
+rps@rps-virtual-machine:~/Desktop$ cat file1
+Akash
+arun
+arun
+Darshan
+Kayu
+    pooja
+Pranav
+Sandy
+Tilaka
+Yashu
+rps@rps-virtual-machine:~/Desktop$ rm file1
+rps@rps-virtual-machine:~/Desktop$ rm names
+rps@rps-virtual-machine:~/Desktop$ ls
+demo
+rps@rps-virtual-machine:~/Desktop$ cat>data
+100 Pooj 56565
+400 Yashu 66585
+200 Sandy 87843
+^C
+rps@rps-virtual-machine:~/Desktop$ cat data
+100 Pooj 56565
+400 Yashu 66585
+200 Sandy 87843
+rps@rps-virtual-machine:~/Desktop$ sort data
+100 Pooj 56565
+200 Sandy 87843
+400 Yashu 66585
+rps@rps-virtual-machine:~/Desktop$ sort -t 2 data
+100 Pooj 56565
+200 Sandy 87843
+400 Yashu 66585
+rps@rps-virtual-machine:~/Desktop$ vi data
+rps@rps-virtual-machine:~/Desktop$ cat data
+100 Pooj 50000
+400 Yashu 80000
+200 Sandy 65000
+700 roop  35000
+rps@rps-virtual-machine:~/Desktop$ sort data
+100 Pooj 50000
+200 Sandy 65000
+400 Yashu 80000
+700 roop  35000
+rps@rps-virtual-machine:~/Desktop$ sort -t 3 data
+100 Pooj 50000
+200 Sandy 65000
+400 Yashu 80000
+700 roop  35000
+rps@rps-virtual-machine:~/Desktop$ sort -k 3 data
+700 roop  35000
+100 Pooj 50000
+200 Sandy 65000
+400 Yashu 80000
+rps@rps-virtual-machine:~/Desktop$ vi data
+rps@rps-virtual-machine:~/Desktop$ cat data
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ sort data
+100;Pooj;50000
+200;Sandy;65000
+400;Yashu;80000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ sort -k 3 data
+100;Pooj;50000
+200;Sandy;65000
+400;Yashu;80000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ sort -t ";" 3 data
+sort: cannot read: 3: No such file or directory
+rps@rps-virtual-machine:~/Desktop$ sort -t ";" -k 3 data
+700;roop; 35000
+100;Pooj;50000
+200;Sandy;65000
+400;Yashu;80000
+rps@rps-virtual-machine:~/Desktop$ sort -r data
+700;roop; 35000
+400;Yashu;80000
+200;Sandy;65000
+100;Pooj;50000
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ touch file1
+rps@rps-virtual-machine:~/Desktop/demo$ touch file2
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2
+rps@rps-virtual-machine:~/Desktop/demo$ mkdir subdir
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ cd subdir
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ touch subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ ls
+subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo
+rps@rps-virtual-machine:~/Desktop$ find . -print
+.
+./demo
+./demo/subdir
+./demo/subdir/subfile1
+./demo/file1
+./demo/file2
+./data
+rps@rps-virtual-machine:~/Desktop$ find . -name "file2"
+./demo/file2
+rps@rps-virtual-machine:~/Desktop$ find . -type d
+.
+./demo
+./demo/subdir
+rps@rps-virtual-machine:~/Desktop$ find . -type f
+./demo/subdir/subfile1
+./demo/file1
+./demo/file2
+./data
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ ls -l
+total 4
+-rw-rw-r-- 1 rps rps    0 Aug 9 11:47 file1
+-rw-rw-r-- 1 rps rps    0 Aug 9 11:47 file2
+drwxrwxr-x 2 rps rps 4096 Aug 9 11:48 subdir
+rps@rps-virtual-machine:~/Desktop/demo$ ls -a
+.  ..  file1  file2  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ ls -t
+subdir  file2  file1
+rps@rps-virtual-machine:~/Desktop/demo$ ls -lt
+total 4
+drwxrwxr-x 2 rps rps 4096 Aug 9 11:48 subdir
+-rw-rw-r-- 1 rps rps    0 Aug 9 11:47 file2
+-rw-rw-r-- 1 rps rps    0 Aug 9 11:47 file1
+rps@rps-virtual-machine:~/Desktop/demo$ ls -u
+subdir  file2  file1
+rps@rps-virtual-machine:~/Desktop/demo$ cat file1
+rps@rps-virtual-machine:~/Desktop/demo$ ls -u
+file1  subdir  file2
+rps@rps-virtual-machine:~/Desktop/demo$ ls -d
+.
+rps@rps-virtual-machine:~/Desktop/demo$ pwd
+/home/rps/Desktop/demo
+rps@rps-virtual-machine:~/Desktop/demo$ touch .file3
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ ls -a
+.  ..  file1  file2  .file3  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo
+rps@rps-virtual-machine:~/Desktop$ cat data
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ cp data data.txt
+rps@rps-virtual-machine:~/Desktop$ ls
+data  data.txt  demo
+rps@rps-virtual-machine:~/Desktop$ cat data
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ cat data.txt
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ mv data.txt newdata
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo  newdata
+rps@rps-virtual-machine:~/Desktop$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ pwd
+/home/rps/Desktop
+rps@rps-virtual-machine:~/Desktop$ cp newdata /home/rps/Desktop/demo
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo  newdata
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  newdata  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+data  demo  newdata
+rps@rps-virtual-machine:~/Desktop$ cat data
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ mv data home/rps/Desktop/demo/subdir
+mv: cannot move 'data' to 'home/rps/Desktop/demo/subdir': No such file or directory
+rps@rps-virtual-machine:~/Desktop$ mv data /home/rps/Desktop/demo/subdir
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  newdata
+rps@rps-virtual-machine:~/Desktop$ cd demo
+rps@rps-virtual-machine:~/Desktop/demo$ cd subdir
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ ls
+data  subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ cat data
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ ls
+data  subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  newdata  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop/demo$ ln newdata sample
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  newdata  sample  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ cat sample
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop/demo$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop/demo$ cat>>sample
+12345678900
+44557384623 
+^C
+rps@rps-virtual-machine:~/Desktop/demo$ cat sample
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+12345678900
+44557384623
+rps@rps-virtual-machine:~/Desktop/demo$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+12345678900
+44557384623
+rps@rps-virtual-machine:~/Desktop/demo$ ls
+file1  file2  newdata  sample  subdir
+rps@rps-virtual-machine:~/Desktop/demo$ cd subdir
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ ls
+data  subfile1
+rps@rps-virtual-machine:~/Desktop/demo/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop/demo$ cp subdir /home/rps/Desktop
+cp: -r not specified; omitting directory 'subdir'
+rps@rps-virtual-machine:~/Desktop/demo$ cp   subdir  /home/rps/Desktop
+cp: -r not specified; omitting directory 'subdir'
+rps@rps-virtual-machine:~/Desktop/demo$ cp -r  subdir /home/rps/Desktop
+rps@rps-virtual-machine:~/Desktop/demo$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  newdata  subdir
+rps@rps-virtual-machine:~/Desktop$ cd subdir
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data  subfile1
+
+
+
+
+
+
+
+rps@rps-virtual-machine:~/Desktop$ date
+Friday 09 August 2024 01:08:30 PM IST
+rps@rps-virtual-machine:~/Desktop$ echo "Hello"
+Hello
+rps@rps-virtual-machine:~/Desktop$ read a
+10
+rps@rps-virtual-machine:~/Desktop$ echo a
+a
+rps@rps-virtual-machine:~/Desktop$ read b
+20
+rps@rps-virtual-machine:~/Desktop$ echo b
+b
+rps@rps-virtual-machine:~/Desktop$ echo $a
+10
+rps@rps-virtual-machine:~/Desktop$ echo $b
+20
+rps@rps-virtual-machine:~/Desktop$  echo $a+$b
+10+20
+rps@rps-virtual-machine:~/Desktop$ echo `expr $a+$b`
+10+20
+rps@rps-virtual-machine:~/Desktop$ echo `expr $a + $b`
+30
+rps@rps-virtual-machine:~/Desktop$ echo LOGNAME
+LOGNAME
+rps@rps-virtual-machine:~/Desktop$ echo $LOGNAME
+rps
+rps@rps-virtual-machine:~/Desktop$ echo $USER
+rps
+rps@rps-virtual-machine:~/Desktop$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+rps@rps-virtual-machine:~/Desktop$ PS1="RAJDIP>"
+RAJDIP>
+RAJDIP>
+RAJDIP>
+RAJDIP>date
+Sunday 11 August 2024 06:46:49 PM IST
+RAJDIP>
+RAJDIP>echo
+
+RAJDIP>PS1="echo"
+echo
+echo
+echoPS1=$
+$echo
+
+$echo $MAIL
+
+$mail user10
+Command 'mail' not found, but can be installed with:
+sudo apt install mailutils
+$PS=%
+$
+$PS1=%
+%
+%ls
+demo  newdata  subdir
+%
+%
+%
+
+
+
+
+
+
+
+rps@rps-virtual-machine:~/Desktop/subdir$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+rps@rps-virtual-machine:~/Desktop/subdir$ who
+rps      tty2         2024-08-09 09:17 (tty2)
+rps@rps-virtual-machine:~/Desktop/subdir$ mail user 10
+Command 'mail' not found, but can be installed with:
+sudo apt install mailutils
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data  subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ cat subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ ls -l
+total 4
+-rw-rw-r-- 1 rps rps  0 Aug 9 12:32 data
+-rw-rw-r-- 1 rps rps  0 Aug 9 12:32 subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ wc data
+ 0  0 0 data
+rps@rps-virtual-machine:~/Desktop/subdir$ cat data
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data  subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  newdata  subdir
+rps@rps-virtual-machine:~/Desktop$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ wc newdata
+ 4  4 61 newdata
+rps@rps-virtual-machine:~/Desktop$ wc -c  newdata
+61 newdata
+rps@rps-virtual-machine:~/Desktop$ wc -l  newdata
+4 newdata
+rps@rps-virtual-machine:~/Desktop$ wc -w  newdata
+4 newdata
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  newdata  subdir
+rps@rps-virtual-machine:~/Desktop$ cat>names
+Raju
+Siddhu
+pooja
+ananya
+^C
+rps@rps-virtual-machine:~/Desktop$ vi names
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+rps@rps-virtual-machine:~/Desktop$ grep "raju" names
+rps@rps-virtual-machine:~/Desktop$ grep "Raju" names
+Raju Training
+rps@rps-virtual-machine:~/Desktop$ grep -c "Raju" names
+1
+rps@rps-virtual-machine:~/Desktop$ vi names
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+rps@rps-virtual-machine:~/Desktop$ grep -c "Training" names
+2
+rps@rps-virtual-machine:~/Desktop$ grep -v "Training" names
+Siddhu Sales
+pooja purchase
+ananya HR
+rps@rps-virtual-machine:~/Desktop$ grep "raju" names
+rps@rps-virtual-machine:~/Desktop$ grep -i "raju" names
+Raju Training
+rps@rps-virtual-machine:~/Desktop$ grep -n "Training" names
+1:Raju Training
+5:Tilaka Training
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ grep "^r" names
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ grep -i "^r" names
+Raju Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ grep -i "e$" names
+pooja purchase
+rps@rps-virtual-machine:~/Desktop$ grep -i "e$|^r" names
+rps@rps-virtual-machine:~/Desktop$ egrep -i "e$|^r" names
+Raju Training
+pooja purchase
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ fgrep -i "e$|^r" names
+rps@rps-virtual-machine:~/Desktop$ fgrep -i "e$" names
+rps@rps-virtual-machine:~/Desktop$ fgrep -i "raju" names
+Raju Training
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  names  newdata  subdir
+rps@rps-virtual-machine:~/Desktop$ cp names subdir
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  names  newdata  subdir
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop$ grep -r "raju" /home/rps/Desktop/subdir
+rps@rps-virtual-machine:~/Desktop$ grep -r "raju" /home/rps/Desktop/subdir/names
+rps@rps-virtual-machine:~/Desktop$ cd subdir
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data  names  subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ mv names newnames
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data  newnames  subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ mv newnames /home/rps/Desktop
+rps@rps-virtual-machine:~/Desktop/subdir$ ls
+data  subfile1
+rps@rps-virtual-machine:~/Desktop/subdir$ cd ..
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  names  newdata  newnames  subdir
+rps@rps-virtual-machine:~/Desktop$ grep -r "raju" /home/rps/Desktop
+rps@rps-virtual-machine:~/Desktop$ grep -r "raju" 
+rps@rps-virtual-machine:~/Desktop$ ls
+demo  names  newdata  newnames  subdir
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ cat names newdata
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ paste names newdata
+Raju Training	100;Pooj;50000
+Siddhu Sales	400;Yashu;80000
+pooja purchase	200;Sandy;65000
+ananya HR	700;roop; 35000
+Tilaka Training	
+raghav accounts	
+rps@rps-virtual-machine:~/Desktop$ paste names newdata newnames
+Raju Training	100;Pooj;50000	Raju Training
+Siddhu Sales	400;Yashu;80000	Siddhu Sales
+pooja purchase	200;Sandy;65000	pooja purchase
+ananya HR	700;roop; 35000	ananya HR
+Tilaka Training		Tilaka Training
+raghav accounts		raghav accounts
+rps@rps-virtual-machine:~/Desktop$ paste names newdata | tee mergedinfo
+Raju Training	100;Pooj;50000
+Siddhu Sales	400;Yashu;80000
+pooja purchase	200;Sandy;65000
+ananya HR	700;roop; 35000
+Tilaka Training	
+raghav accounts	
+rps@rps-virtual-machine:~/Desktop$ cat mergedinfo
+Raju Training	100;Pooj;50000
+Siddhu Sales	400;Yashu;80000
+pooja purchase	200;Sandy;65000
+ananya HR	700;roop; 35000
+Tilaka Training	
+raghav accounts	
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ grep "[p,r]" names
+Raju Training
+pooja purchase
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ cat names| tr "[a-z]" "[A-Z]"
+RAJU TRAINING
+SIDDHU SALES
+POOJA PURCHASE
+ANANYA HR
+TILAKA TRAINING
+RAGHAV ACCOUNTS
+rps@rps-virtual-machine:~/Desktop$ cat names| tr "[a-e]" "[A-E]"
+RAju TrAining
+SiDDhu SAlEs
+poojA purChAsE
+AnAnyA HR
+TilAkA TrAining
+rAghAv ACCounts
+rps@rps-virtual-machine:~/Desktop$ cat names| tr "[a-e-i-o-u]" "[A-E-I-O-U]"
+RAJU TrAININg
+SIDDhU SALEs
+pOOJA pUrChAsE
+ANANyA HR
+TILAKA TrAININg
+rAghAv ACCOUNts
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ cat names | cut -c 3
+j
+d
+o
+a
+l
+g
+rps@rps-virtual-machine:~/Desktop$ cat names | cut -c 3-5
+ju 
+ddh
+oja
+any
+lak
+gha
+rps@rps-virtual-machine:~/Desktop$ cat names | cut -c 3,5,7
+j r
+dh 
+oap
+ay 
+lk 
+ga 
+rps@rps-virtual-machine:~/Desktop$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ cut -d ";" -f2 newdata
+Pooj
+Yashu
+Sandy
+roop
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ cat newnames
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ vi info
+rps@rps-virtual-machine:~/Desktop$ cat info
+karen
+karen
+sanjay
+sandy
+yash
+madhu
+rps@rps-virtual-machine:~/Desktop$ cat info | uniq
+karen
+sanjay
+sandy
+yash
+madhu
+rps@rps-virtual-machine:~/Desktop$ sort info | uniq
+karen
+madhu
+sandy
+sanjay
+yash
+rps@rps-virtual-machine:~/Desktop$ sort info | uniq -d
+karen
+rps@rps-virtual-machine:~/Desktop$ sort info | uniq -u
+madhu
+sandy
+sanjay
+yash
+rps@rps-virtual-machine:~/Desktop$ sort info | uniq -c
+      2 karen
+      1 madhu
+      1 sandy
+      1 sanjay
+      1 yash
+rps@rps-virtual-machine:~/Desktop$ sort info | uniq -f 1
+karen
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ sort names | uniq -f 1
+ananya HR
+pooja purchase
+raghav accounts
+Raju Training
+Siddhu Sales
+Tilaka Training
+rps@rps-virtual-machine:~/Desktop$ sort -k 2 names | uniq -f 1
+raghav accounts
+ananya HR
+pooja purchase
+Siddhu Sales
+Raju Training
+rps@rps-virtual-machine:~/Desktop$ sort -k 2 names | uniq
+raghav accounts
+ananya HR
+pooja purchase
+Siddhu Sales
+Raju Training
+Tilaka Training
+rps@rps-virtual-machine:~/Desktop$ sort -k 2 names | uniq -c -f 1
+      1 raghav accounts
+      1 ananya HR
+      1 pooja purchase
+      1 Siddhu Sales
+      2 Raju Training
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-rw-rw-r-- 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+
+rps@rps-virtual-machine:~/Desktop$ chmod u+x,g+x,o+w newdata
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-rwxrwxrw- 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+
+rps@rps-virtual-machine:~/Desktop$ chmod u-r,g-w,o-r newdata
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+--wxr-x-w- 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+
+rps@rps-virtual-machine:~/Desktop$ chmod u=x,g=x,o=x newdata
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+---x--x--x 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+rps@rps-virtual-machine:~/Desktop$ chmod a=r newdata
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r--r--r-- 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+rps@rps-virtual-machine:~/Desktop$ chmod a=r newdata
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r--r--r-- 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+rps@rps-virtual-machine:~/Desktop$ cat>>newdata
+bash: newdata: Permission denied
+rps@rps-virtual-machine:~/Desktop$ cat newdata
+100;Pooj;50000
+400;Yashu;80000
+200;Sandy;65000
+700;roop; 35000
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r--r--r-- 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+rps@rps-virtual-machine:~/Desktop$ chmod 531 newdata
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r-x-wx--x 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ cat names| tr -s " "
+Raju Training
+Siddhu Sales
+pooja purchase
+ananya HR
+Tilaka Training
+raghav accounts
+rps@rps-virtual-machine:~/Desktop$ vi names
+rps@rps-virtual-machine:~/Desktop$ cat names
+Raju            Training
+Siddhu      Sales
+pooja          purchase
+ananya HR
+Tilaka           Training
+raghav           accounts
+rps@rps-virtual-machine:~/Desktop$ cat names| tr -s " "
+Raju            Training
+Siddhu      Sales
+pooja          purchase
+ananya HR
+Tilaka           Training
+raghav           accounts
+
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r-x-wx--x 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+rps@rps-virtual-machine:~/Desktop$ ls -l| tr -s " "
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r-x-wx--x 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+rps@rps-virtual-machine:~/Desktop$ ls -l| tr -s " "| cut -f 9
+total 28
+drwxrwxr-x 3 rps rps 4096 Aug 9 12:24 demo
+-rw-rw-r-- 1 rps rps   36 Aug 9 16:52 info
+-rw-rw-r-- 1 rps rps  149 Aug 9 15:46 mergedinfo
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:11 names
+-r-x-wx--x 1 rps rps   63 Aug 9 12:08 newdata
+-rw-rw-r-- 1 rps rps   84 Aug 9 15:26 newnames
+drwxrwxr-x 2 rps rps 4096 Aug 9 15:28 subdir
+
+rps@rps-virtual-machine:~/Desktop$ ls -l| tr -s " "| cut -d " " -f 9
+
+demo
+info
+mergedinfo
+names
+newdata
+newnames
+subdir
+
+rps@rps-virtual-machine:~/Desktop$ ls -l|  cut -d " " -f 9
+
+12:24
+
+9
+
+
+
+15:28
+
+
+
+
+

@@ -1,0 +1,36 @@
+Persons
+u=> user (owner)
+g=> group
+o=> other
+
+symbols
+
++ => grant
+- => revoke
+= => grant/revoke
+
+permissions
+
+r => read
+w => write
+x => execute
+
+
+octa-decimal representation
+---------------------------
+
+0 - 000
+1 - 001
+2 - 010
+3 - 011
+4 - 100
+5 - 101
+6 - 110
+7 - 111
+
+first digit - > r
+second digit -> w
+third digit  - > x
+
+0 -> reoke
+1 -> grant

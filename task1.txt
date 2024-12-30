@@ -1,0 +1,15 @@
+echo "enter value a"
+read a
+echo "enter value b"
+read b
+echo "enter value c"
+read c
+if [ $a - gt $b - a $a - gt $c ]
+then
+echo "a is large"
+elif [ $b -gt $c ]
+then
+echo "b is large"
+else
+echo "c is large"
+fi

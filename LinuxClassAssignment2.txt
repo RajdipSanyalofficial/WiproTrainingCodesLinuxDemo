@@ -1,0 +1,61 @@
+Linux Class Assignment 2
+------------------------
+
+Display the names of all files that start with a lower case alphabet followed by a digit and ending with .c or .o.
+List out all the filenames which start with the digit 9.
+Display the name of all users logged in currently.
+Now display your own terminal filename.
+Take a long listing of all the files in your HOME directory.
+Create a file called second with some contents in the directory mydir.
+Find out the FAP for the file second.
+Display the contents of the file second.
+Change the FAP for the file second so that others get read permission. Display the FAP for the file after changing them
+has context menu
+
+Give the command to display the total number of files in the current directory.[hint: use pipes]
+Give the command to display the number of lines where the word “and” occurs in a file test.
+
+
+rps@rps-virtual-machine:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 rps rps   61 Aug 10 10:26  data
+drwxrwxr-x 3 rps rps 4096 Aug  9 12:24  demo
+-rw-rw-r-- 1 rps rps   17 Aug  9 12:39  first
+-rw-rw-r-- 2 rps rps   17 Aug  9 16:57  info
+drwxrwxr-x 2 rps rps 4096 Aug  9 11:48 'Mobile Application Development '
+drwxrwxr-x 3 rps rps 4096 Aug 10 11:36  mydir
+-rw-rw-r-- 1 rps rps   74 Aug 10 11:36  names
+-rw-rw-r-- 1 rps rps  113 Aug  9 17:40  names1
+-rw-rw-r-- 1 rps rps  174 Aug  9 15:48  sampleinfo
+-rw-rw-r-- 2 rps rps   17 Aug  9 16:57  sample
+rps@rps-virtual-machine:~/Desktop$ cd mydir
+rps@rps-virtual-machine:~/Desktop/mydir$ cat>second
+Wipro
+Engineering Edge
+Mobile Android Development
+^C
+rps@rps-virtual-machine:~/Desktop/mydir$ ls -l second
+-rw-rw-r-- 1 rps rps 50 Aug 10 11:37 second
+rps@rps-virtual-machine:~/Desktop/mydir$ chmod o-r second
+rps@rps-virtual-machine:~/Desktop/mydir$ cat second
+Wipro
+Engineering Edge
+Mobile Android Development
+rps@rps-virtual-machine:~/Desktop/mydir$ chmod o+r second
+rps@rps-virtual-machine:~/Desktop/mydir$ ls -l second
+-rw-rw-r-- 1 rps rps 50 Aug 10 11:37 second
+rps@rps-virtual-machine:~/Desktop/mydir$ ls -l | grep "^-" | wc -l
+3
+rps@rps-virtual-machine:~/Desktop/mydir$ ls
+names1  namesinfo  second  Task
+rps@rps-virtual-machine:~/Desktop/mydir$ cd Task
+rps@rps-virtual-machine:~/Desktop/mydir/Task$ ls 
+9man  9mile  9oclock  9thperson  a2.c  a4.o  man  q1.o  q2.c  sam  test  vish
+rps@rps-virtual-machine:~/Desktop/mydir/Task$ cat test
+I am Rajdip Sanyal.I am from West Bengal
+I am mobile application developer
+Thank You
+rps@rps-virtual-machine:~/Desktop/mydir/Task$ grep -w "and" test | wc -l
+3
+
+

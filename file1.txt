@@ -1,0 +1,16 @@
+echo "Enter value of c"
+read c
+echo "Enter value of d"
+read d
+echo `expr $c + $d`
+
+
+echo "Enter value of c"
+read c
+echo "Enter value of d"
+read d
+echo `expr $c \* $d`
+
+
+
+

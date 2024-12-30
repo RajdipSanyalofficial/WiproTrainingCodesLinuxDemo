@@ -1,0 +1,10 @@
+echo "Enter value for a"
+read a
+echo "Enter value for b"
+read b
+if [$a - gt 0 -a $b -gt 0]
+then
+echo `expr $a\*$b`
+else
+echo "Only non-zero values are allowed"
+fi
